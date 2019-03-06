@@ -18,6 +18,7 @@ class ViewController: UIViewController, QuizProtocol {
         super.viewDidLoad()
         
         model.getQuestions()
+        model.delegate = self
     }
 
     func questionsRetrieved(questions: [Question]) {

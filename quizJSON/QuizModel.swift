@@ -17,6 +17,6 @@ class QuizModel {
     var delegate:QuizProtocol?
     
     func getQuestions() {
-        
+        delegate?.questionsRetrieved(questions: [Question]())
     }
 }
