@@ -8,13 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, QuizProtocol {
 
+    var model = QuizModel()
+    var question = [Question]()
+    var questionIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        model.getQuestions()
     }
 
+    func questionsRetrieved(questions: [Question]) {
+        print("Questions returned")
+    }
 
 }
 

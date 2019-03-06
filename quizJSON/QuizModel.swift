@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+protocol QuizProtocol {
+    func questionsRetrieved(questions:[Question])
+}
+
+class QuizModel {
+    
+    var delegate:QuizProtocol?
+    
+    func getQuestions() {
+        
+    }
+}
