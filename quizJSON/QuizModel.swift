@@ -30,9 +30,17 @@ class QuizModel {
             return
         }
         //create url object w/path
+        let url = URL(fileURLWithPath: path!)
         
         //get data from url
+        do {
+        let data = try Data(contentsOf: url)
+        let decoder = JSONDecoder()
         
+        }
+        catch {
+            print("couldn't get data from file")
+        }
         //decode data into Questions struct instances
     }
     
