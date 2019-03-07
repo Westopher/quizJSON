@@ -14,6 +14,7 @@
 		3DB88EDA223024A400FC762B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB88ED8223024A400FC762B /* LaunchScreen.storyboard */; };
 		3DB88EE2223024F600FC762B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB88EE1223024F600FC762B /* Question.swift */; };
 		3DB88EE4223025BB00FC762B /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB88EE3223025BB00FC762B /* QuizModel.swift */; };
+		3DB88EE62231BD6100FC762B /* QuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DB88EE52231BD6100FC762B /* QuestionData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3DB88EDB223024A400FC762B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DB88EE1223024F600FC762B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3DB88EE3223025BB00FC762B /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		3DB88EE52231BD6100FC762B /* QuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3DB88EE1223024F600FC762B /* Question.swift */,
 				3DB88EE3223025BB00FC762B /* QuizModel.swift */,
 				3DB88ED3223024A300FC762B /* Main.storyboard */,
+				3DB88EE52231BD6100FC762B /* QuestionData.json */,
 				3DB88ED6223024A400FC762B /* Assets.xcassets */,
 				3DB88ED8223024A400FC762B /* LaunchScreen.storyboard */,
 				3DB88EDB223024A400FC762B /* Info.plist */,
@@ -131,6 +134,7 @@
 				3DB88EDA223024A400FC762B /* LaunchScreen.storyboard in Resources */,
 				3DB88ED7223024A400FC762B /* Assets.xcassets in Resources */,
 				3DB88ED5223024A300FC762B /* Main.storyboard in Resources */,
+				3DB88EE62231BD6100FC762B /* QuestionData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
