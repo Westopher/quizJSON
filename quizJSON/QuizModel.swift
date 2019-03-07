@@ -36,7 +36,8 @@ class QuizModel {
         do {
         let data = try Data(contentsOf: url)
         let decoder = JSONDecoder()
-        
+        let array = try decoder.decode([Question].self, from: data)
+            
         }
         catch {
             print("couldn't get data from file")
