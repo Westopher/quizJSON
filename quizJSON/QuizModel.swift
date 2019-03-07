@@ -34,15 +34,17 @@ class QuizModel {
         
         //get data from url
         do {
-        let data = try Data(contentsOf: url)
-        let decoder = JSONDecoder()
-        let array = try decoder.decode([Question].self, from: data)
-            
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let array = try decoder.decode([Question].self, from: data)
+        
+            delegate?.questionsRetrieved(questions: array)
         }
         catch {
             print("couldn't get data from file")
         }
         //decode data into Questions struct instances
+        
     }
     
     func getRemoteJSONFile() {

@@ -23,6 +23,7 @@ class ViewController: UIViewController, QuizProtocol {
 
     func questionsRetrieved(questions: [Question]) {
         print("Questions returned")
+        
     }
 
 }
