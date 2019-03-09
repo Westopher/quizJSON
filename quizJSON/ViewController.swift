@@ -27,7 +27,8 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
     }
 
     func questionsRetrieved(questions: [Question]) {
-        print("Questions returned")
+        self.questions = questions
+        tableView.reloadData()
         
     }
     
