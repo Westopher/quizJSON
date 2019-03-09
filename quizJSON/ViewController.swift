@@ -32,14 +32,17 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard questions[questionIndex].answers != nil else {
+        guard questions.count > 0 && questions[questionIndex].answers != nil else {
             return 0
         }
         return questions[questionIndex].answers!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath)
+        let label = cell.viewWithTag(1) as! UILabel
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
