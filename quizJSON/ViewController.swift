@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, QuizProtocol {
+class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UITableViewDelegate {
+    
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     var model = QuizModel()
     var question = [Question]()
     var questionIndex = 0
@@ -24,6 +29,14 @@ class ViewController: UIViewController, QuizProtocol {
     func questionsRetrieved(questions: [Question]) {
         print("Questions returned")
         
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
 
 }
