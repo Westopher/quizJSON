@@ -55,11 +55,13 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath)
         let label = cell.viewWithTag(1) as! UILabel
         
+        label.text = questions[questionIndex].answers?[indexPath.row]
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //when user chooses and answer
+        //when user chooses an answer
     }
 
 }
