@@ -15,10 +15,17 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     
     @IBOutlet weak var dismissButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    func setPopUp(withTitle: String, withMessasge:String, withAction: String) {
+        resultLabel.text = withTitle
+        feedbackLabel.text = withMessasge
+        dismissButton.setTitle(withAction, for: .normal)
+    }
+    
     
     @IBAction func dismissedTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
