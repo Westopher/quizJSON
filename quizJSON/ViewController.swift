@@ -22,6 +22,8 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
         model.delegate = self
         model.getQuestions()
 
@@ -62,7 +64,14 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //when user chooses an answer
-    }
-
+        if questions[questionIndex].correctAnswerIndex == indexPath.row {
+            numCorrect = numCorrect + 1
+        }
+        else {
+            
+        }
+        questionIndex = questionIndex + 1
+        displayQuestion()
 }
 
+}
