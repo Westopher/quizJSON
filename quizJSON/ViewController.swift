@@ -18,6 +18,7 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
     var model = QuizModel()
     var questions = [Question]()
     var questionIndex = 0
+    var numCorrect = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
