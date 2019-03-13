@@ -129,23 +129,30 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oBe-ra-Tdd">
                                         <rect key="frame" x="50" y="50" width="163" height="347"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wz-Rv-dZ9">
-                                                <rect key="frame" x="60.5" y="0.0" width="42" height="115.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wz-Rv-dZ9">
+                                                <rect key="frame" x="48" y="0.0" width="67.5" height="115.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJT-QI-yeV">
-                                                <rect key="frame" x="60.5" y="115.5" width="42" height="116"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJT-QI-yeV">
+                                                <rect key="frame" x="0.0" y="115.5" width="163" height="116"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-pU-vc3">
-                                                <rect key="frame" x="58.5" y="231.5" width="46" height="115.5"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="231.5" width="163" height="115.5"/>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="dismissedTapped:" destination="LZC-DJ-SJt" eventType="touchUpInside" id="O3u-w8-mTQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hJT-QI-yeV" firstAttribute="width" secondItem="oBe-ra-Tdd" secondAttribute="width" id="6eI-iW-uZV"/>
+                                            <constraint firstItem="GVU-pU-vc3" firstAttribute="width" secondItem="oBe-ra-Tdd" secondAttribute="width" id="SzH-4H-iMf"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,7 +164,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RTX-Fe-HBZ" firstAttribute="leading" secondItem="zow-MU-vdn" secondAttribute="leadingMargin" constant="40" id="ei5-aK-u5K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RTX-Fe-HBZ" secondAttribute="trailing" constant="40" id="enB-14-3jq"/>
@@ -165,6 +172,12 @@
                             <constraint firstItem="RTX-Fe-HBZ" firstAttribute="top" secondItem="Wgd-Ic-zqj" secondAttribute="bottom" constant="100" id="ukg-iq-w8A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dimView" destination="lNq-2m-6bj" id="Er8-Ph-wkW"/>
+                        <outlet property="dismissButton" destination="GVU-pU-vc3" id="iz8-hl-LTp"/>
+                        <outlet property="feedbackLabel" destination="hJT-QI-yeV" id="f6O-bY-WLY"/>
+                        <outlet property="resultLabel" destination="2wz-Rv-dZ9" id="M3Z-bD-soC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7Q-Ar-MYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
