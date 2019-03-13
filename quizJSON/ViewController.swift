@@ -26,10 +26,21 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDataSource, UIT
         model.getQuestions()
 
     }
+    
+    func displayQuestion() {
+        guard questionIndex < questions.count else {
+            print("Trying to display question index that is out of bounds")
+            return
+        }
+        
+        questionLabel.text = questions[questionIndex].question!
+        
+        tableView.reloadData()
+    }
 
     func questionsRetrieved(questions: [Question]) {
         self.questions = questions
-        tableView.reloadData()
+        displayQuestion()
         
     }
     
